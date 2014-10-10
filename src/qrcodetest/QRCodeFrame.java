@@ -38,6 +38,7 @@ public class QRCodeFrame extends javax.swing.JFrame {
         initComponents();
         ipImage = new ImagePanel();
         jSplitPane1.setRightComponent(ipImage);
+        genFromClipboard();
     }
 
     /**
