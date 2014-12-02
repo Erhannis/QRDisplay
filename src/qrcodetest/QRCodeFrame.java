@@ -135,6 +135,9 @@ public class QRCodeFrame extends javax.swing.JFrame {
     }
     
     public Image genFromString(String str, int size) {
+        if (str == null || str.isEmpty()) {
+            return new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
+        }
         try {
             Hashtable<EncodeHintType, ErrorCorrectionLevel> hintMap = new Hashtable<EncodeHintType, ErrorCorrectionLevel>();
             hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
